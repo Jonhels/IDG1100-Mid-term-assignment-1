@@ -66,4 +66,4 @@ wc -l facts-Kyle.txt >> facts-Kyle.txt
 
 #Delete files we don't need anymore
 rm people.txt
-rm people.txt
+rm cleaned.txt
