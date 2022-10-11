@@ -48,22 +48,24 @@ grep Kyle cleaned.txt > facts-Kyle.txt
 
 #Add linecount in the end of every facts file
 
-wc -l facts-Mari.txt >> facts-Mari.txt
+awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Mari.txt >> facts-Mari.txt
 
-wc -l facts-John.txt >> facts-John.txt
+awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-John.txt >> facts-John.txt
 
-wc -l facts-Daniel.txt >> facts-Daniel.txt
+awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Daniel.txt >> facts-Daniel.txt
 
-wc -l facts-Ole.txt >> facts-Ole.txt
+awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Ole.txt >> facts-Ole.txt
 
-wc -l facts-Fred.txt >> facts-Fred.txt
+awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Fred.txt >> facts-Fred.txt
 
-wc -l facts-Paul.txt >> facts-Paul.txt
+awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Paul.txt >> facts-Paul.txt
 
-wc -l facts-Andrea.txt >> facts-Andrea.txt
+awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Andrea.txt >> facts-Andrea.txt
 
-wc -l facts-Kyle.txt >> facts-Kyle.txt
+awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Kyle.txt >> facts-Kyle.txt
 
 #Delete files we don't need anymore
 rm people.txt
 rm cleaned.txt
+
+#
