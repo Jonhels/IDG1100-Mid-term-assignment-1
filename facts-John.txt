@@ -1,0 +1,6 @@
+John
+John has a farm.
+Mari loves John.
+John never tasted good pizza.
+In the last 10 years John went to Sweden only once.
+Number of lines:  4

@@ -66,6 +66,13 @@ awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Kyle.txt >> 
 
 #Delete files we don't need anymore
 rm people.txt
-rm cleaned.txt
 
-#
+
+#Names less than 5
+#grep -v cleaned.txt > filename2; mv filename2 cleaned.txt
+head -n8 cleaned.txt > lessthanfive.txt
+sed -E 's/\b\w{2,5}\b//g' lessthanfive.txt >> morethanfive.txt
+sed '/^[[:space:]]*$/d' morethanfive.txt >> morecleaned.txt
+sed -i 's/Andrea/facts-Andrea.txt/g' morecleaned.txt
+
+#https://www.baeldung.com/linux/delete-files-listed-in-file
