@@ -70,9 +70,27 @@ rm people.txt
 
 #Names less than 5
 #grep -v cleaned.txt > filename2; mv filename2 cleaned.txt
-head -n8 cleaned.txt > lessthanfive.txt
-sed -E 's/\b\w{2,5}\b//g' lessthanfive.txt >> morethanfive.txt
-sed '/^[[:space:]]*$/d' morethanfive.txt >> morecleaned.txt
-sed -i 's/Andrea/facts-Andrea.txt/g' morecleaned.txt
+head -n8 cleaned.txt > morethanfive.txt
+grep 
+sed -n '/^.\{5\}/!p'  morethanfive.txt >> lessthanfive.txt
+#sed '/^[[:space:]]*$/d' morethanfive.txt >> morecleaned.txt
+sed -i 's/Andrea/facts-Andrea.txt/g' lessthanfive.txt >> morecleaned.txt
+sed -i 's/Daniel/facts-Daniel.txt/g' lessthanfive.txt >> morecleaned.txt
+sed -i 's/Fred/facts-Fred.txt/g' lessthanfive.txt >> morecleaned.txt
+sed -i 's/John/facts-John.txt/g' lessthanfive.txt >> morecleaned.txt
+sed -i 's/Kyle/facts-Kyle.txt/g' lessthanfive.txt >> morecleaned.txt
+sed -i 's/Mari/facts-Mari.txt/g' lessthanfive.txt >> morecleaned.txt
+sed -i 's/Ole/facts-Ole.txt/g' lessthanfive.txt >> morecleaned.txt
+sed -i 's/Paul/facts-Paul.txt/g' lessthanfive.txt >> morecleaned.txt
+
+$ cat morecleaned.txt 
+#!/bin/bash
+
+TO_BE_DEL="$1"
+IFS=""
+
+while read -r file ; do
+    rm -r "$file"
+done < "$TO_BE_DEL"
 
 #https://www.baeldung.com/linux/delete-files-listed-in-file
