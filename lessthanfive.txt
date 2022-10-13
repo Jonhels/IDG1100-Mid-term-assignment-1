@@ -1,6 +1,0 @@
-facts-Mari.txt
-facts-John.txt
-facts-Ole.txt
-facts-Fred.txt
-facts-Paul.txt
-facts-Kyle.txt

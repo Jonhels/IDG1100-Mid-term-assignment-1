@@ -38,6 +38,7 @@ awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Paul.txt >> 
 awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Andrea.txt >> facts-Andrea.txt
 awk 'BEGIN{c1=-1} //{c1++} END{print "Number of lines: ",c1}' facts-Kyle.txt >> facts-Kyle.txt
 
+#Filtrering I-P
 #Take all names from cleaned txt and put them in a new file
 head -n8 cleaned.txt > morethanfive.txt
 
@@ -60,6 +61,9 @@ IFS=""
 while read -r file ; do
     rm -r "$file"
 done < "$TO_BE_DEL"
+
+#Manipulation I-P
+#
 
 #Delete files we don't need anymore
 #rm people.txt
