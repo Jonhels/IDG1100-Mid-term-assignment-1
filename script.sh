@@ -62,7 +62,7 @@ while read -r file ; do
 done < "$TO_BE_DEL"
 
 #Delete files we don't need anymore
-rm people.txt
-rm cleaned.txt
-rm lessthanfive.txt
-rm morethanfive.txt
+#rm people.txt
+#rm cleaned.txt
+#rm lessthanfive.txt
+#rm morethanfive.txt
