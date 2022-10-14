@@ -63,10 +63,15 @@ while read -r file ; do
 done < "$TO_BE_DEL"
 
 #Manipulation I-P
-#
+
+#Andrea
+sed -n 2,4\p facts-Andrea.txt | tr -c 'Andrea' 'THIS FUNNY PERSON'
+#sed -i 's/Andrea/THIS FUNNY PERSON/g' facts-Andrea.txt
+
+#David
 
 #Delete files we don't need anymore
-#rm people.txt
-#rm cleaned.txt
-#rm lessthanfive.txt
-#rm morethanfive.txt
+rm people.txt
+rm cleaned.txt
+rm lessthanfive.txt
+rm morethanfive.txt
